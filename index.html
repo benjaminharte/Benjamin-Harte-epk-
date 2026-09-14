@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benjamin Harte | Official EPK 2026</title>
+  <meta name="description" content="Benjamin Harte – Nigerian Pop & R&B Singer-Songwriter. Where emotion becomes music. Official Electronic Press Kit.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --surface-2: #1c1c1c;
+      --border: #2a2a2a;
+      --text: #f5f5f5;
+      --text-muted: #a0a0a0;
+      --accent: #c41e3a;
+      --accent-hover: #e02a4a;
+      --radius: 12px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* Header / Hero */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(196,30,58,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-photo {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 60px rgba(196,30,58,0.3);
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .hero .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+    .hero .tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+    .hero .epk-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,10,0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    nav a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* Sections */
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.75rem;
+    }
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    /* About */
+    .about-text {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+    .about-text p { margin-bottom: 1rem; }
+
+    /* Profile table */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 0.75rem 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .profile-grid dt {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .profile-grid dd {
+      font-weight: 500;
+    }
+
+    /* Latest Release */
+    .release-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+    }
+    @media (min-width: 600px) {
+      .release-card {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
+    .album-art {
+      width: 200px;
+      height: 200px;
+      border-radius: 8px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+    }
+    .release-info h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .release-info .meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .release-info p {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      font-size: 0.95rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+    .btn svg { width: 18px; height: 18px; }
+
+    /* Socials */
+    .socials-grid {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .social-link:hover {
+      border-color: var(--accent);
+      background: var(--surface-2);
+    }
+    .social-link .platform {
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .social-link .url {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      max-width: 55%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .social-link svg {
+      width: 16px;
+      height: 16px;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    /* Contact */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .contact-box p {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      font-size: 0.95rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-item:last-child { border-bottom: none; }
+    .contact-item .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      width: 90px;
+      flex-shrink: 0;
+    }
+    .contact-item a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .contact-item a:hover { text-decoration: underline; }
+
+    /* Artist Statement */
+    .statement {
+      text-align: center;
+      padding: 2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .statement blockquote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .statement p {
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Official Photo */
+    .official-photo {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .official-photo img {
+      width: 220px;
+      height: 220px;
+      border-radius: 12px;
+      object-fit: cover;
+      margin: 0 auto 0.75rem;
+      border: 1px solid var(--border);
+    }
+    .official-photo figcaption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    footer .note {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .profile-grid { grid-template-columns: 1fr; gap: 0.25rem; }
+      .profile-grid dt { margin-top: 0.5rem; }
+      .profile-grid dt:first-child { margin-top: 0; }
+      .social-link .url { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="artist.jpg" alt="Benjamin Harte" class="hero-photo">
+    <h1>BENJAMIN HARTE</h1>
+    <p class="subtitle">Nigerian Pop & R&B Singer-Songwriter</p>
+    <p class="tagline">Where emotion becomes music.</p>
+    <p class="epk-label">Electronic Press Kit • 2026</p>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#release">Latest</a></li>
+      <li><a href="#socials">Music & Socials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Benjamin Harte</h2>
+    <div class="about-text">
+      <p>Benjamin Harte, born Benjamin Okafor on December 28, 2006, is a Nigerian pop and R&B singer-songwriter from Delta State, Nigeria. Blending contemporary pop, R&B, and acoustic influences, his music draws from love, life experiences, faith, vulnerability, and the emotions that shape our lives.</p>
+      <p>Benjamin’s passion for music began at 16, when he started singing at school. With limited access to professional recording equipment, he found another way to pursue his dream. After discovering BandLab, he began writing, recording, and creating music using his phone. What started with simple tools became the foundation of his journey as an artist.</p>
+      <p>As a singer-songwriter, Benjamin Harte aims to create honest and relatable music that connects with listeners emotionally. His songs explore love, personal experiences, faith, hope, and the realities of growing into who you are. Still at the beginning of his journey, Benjamin is committed to developing his sound, improving his craft, and reaching audiences beyond Nigeria. His dream is to take his music to a global audience, collaborate with talented artists and producers, and eventually work with a record label that believes in his vision. For Benjamin Harte, this is only the beginning.</p>
+    </div>
+
+    <h2 style="margin-top: 2.5rem;">Artist Profile</h2>
+    <dl class="profile-grid">
+      <dt>Artist name</dt>
+      <dd>Benjamin Harte</dd>
+      <dt>Birth name</dt>
+      <dd>Benjamin Okafor</dd>
+      <dt>Born</dt>
+      <dd>December 28, 2006</dd>
+      <dt>From</dt>
+      <dd>Delta State, Nigeria</dd>
+      <dt>Genres</dt>
+      <dd>Pop • R&B • Acoustic</dd>
+      <dt>Role</dt>
+      <dd>Singer • Songwriter</dd>
+    </dl>
+  </section>
+
+  <!-- LATEST RELEASE -->
+  <section id="release">
+    <h2>Latest Release</h2>
+    <div class="release-card">
+      <img src="album.jpg" alt="Why's Love So Painful album art" class="album-art">
+      <div class="release-info">
+        <h3>Why’s Love So Painful</h3>
+        <p class="meta">Benjamin Harte • Single</p>
+        <p>A release centered on the emotional side of love, presented through Benjamin Harte’s pop and R&B sound.</p>
+        <a href="https://open.spotify.com/artist/3rq1bwzTLyAcaIyrZViQZv" class="btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          Listen on Spotify
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUSIC & SOCIALS -->
+  <section id="socials">
+    <h2>Music & Socials</h2>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">Official places to discover and follow Benjamin Harte.</p>
+    <div class="socials-grid">
+      <a href="https://open.spotify.com/artist/3rq1bwzTLyAcaIyrZViQZv" class="social-link" target="_blank" rel="noopener">
+        <span class="platform">Spotify</span>
+        <span class="url">open.spotify.com/artist/...</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+      <a href="https://music.apple.com/ng/artist/benjamin-harte/1777699736" class="social-link" target="_blank" rel="noopener">
+        <span class="platform">Apple Music</span>
+        <span class="url">music.apple.com/ng/artist/...</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+      <a href="https://youtube.com/@benjamin_hmusic" class="social-link" target="_blank" rel="noopener">
+        <span class="platform">YouTube</span>
+        <span class="url">youtube.com/@benjamin_hmusic</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+      <a href="https://www.instagram.com/benjamin_hmusic" class="social-link" target="_blank" rel="noopener">
+        <span class="platform">Instagram</span>
+        <span class="url">instagram.com/benjamin_hmusic</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+      <a href="https://www.facebook.com/share/1MXscdKSDV/" class="social-link" target="_blank" rel="noopener">
+        <span class="platform">Facebook</span>
+        <span class="url">facebook.com/...</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@benjamin_harte" class="social-link" target="_blank" rel="noopener">
+        <span class="platform">TikTok</span>
+        <span class="url">tiktok.com/@benjamin_harte</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+      <a href="https://x.com/benjamin_hmusic" class="social-link" target="_blank" rel="noopener">
+        <span class="platform">X</span>
+        <span class="url">x.com/benjamin_hmusic</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact & Media</h2>
+    <div class="contact-box">
+      <p>For music features, collaborations, promotion, bookings, media inquiries, or other business opportunities:</p>
+      <div class="contact-item">
+        <span class="label">Email</span>
+        <a href="mailto:benjaminharteofficial@gmail.com">benjaminharteofficial@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="label">WhatsApp</span>
+        <a href="https://wa.me/2347041077838">+234 704 107 7838</a>
+      </div>
+    </div>
+
+    <div class="statement">
+      <blockquote>“Where emotion becomes music.”</blockquote>
+      <p>Benjamin Harte is focused on developing an honest, emotionally connected sound and building a lasting connection with listeners in Nigeria and around the world.</p>
+    </div>
+
+    <figure class="official-photo">
+      <img src="artist.jpg" alt="Official artist photo of Benjamin Harte">
+      <figcaption>Official Artist Photo</figcaption>
+    </figure>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Benjamin Harte • Official EPK</p>
+    <p class="note">No achievements or media features are listed yet; this EPK can be updated as Benjamin’s career grows.</p>
+  </footer>
+
+</body>
+</html>
